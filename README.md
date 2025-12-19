@@ -1,75 +1,66 @@
-🧠 Multimodal AI Debug Assistant
+---
 
-A full-stack AI-powered debugging assistant that analyzes source code + runtime logs + screenshots to generate intelligent debugging suggestions using JWT authentication, OAuth, and AI analysis.
+# 🧠 Multimodal AI Debug Assistant
 
-🚀 Features
+A full-stack **AI-powered debugging assistant** that analyzes **source code + runtime logs + screenshots** to generate intelligent debugging suggestions using **JWT authentication**, **OAuth**, and **AI analysis**.
 
-🔐 Authentication
+---
 
-Email & Password (JWT based)
+## 🚀 Features
 
-Google OAuth
+* 🔐 **Authentication**
 
-GitHub OAuth
+  * Email & Password (JWT based)
+  * Google OAuth
+  * GitHub OAuth
+* 🧠 **AI Debug Analysis**
 
-🧠 AI Debug Analysis
+  * Code analysis
+  * Runtime log analysis
+  * Screenshot OCR (optional)
+* 🛡️ **Secure APIs**
 
-Code analysis
+  * JWT protected routes
+* 🎨 **Modern UI**
 
-Runtime log analysis
+  * React + Vite
+  * Tailwind CSS
+  * Monaco Code Editor
+* 🌐 **Deployment Ready**
 
-Screenshot OCR (optional)
+  * Backend: Render
+  * Frontend: Vercel
+* ⚙️ **Mock AI Mode** (no API cost)
 
-🛡️ Secure APIs
+---
 
-JWT protected routes
+## 🏗️ Tech Stack
 
-🎨 Modern UI
+### Frontend
 
-React + Vite
+* React (Vite)
+* Tailwind CSS
+* Axios
+* Monaco Editor
 
-Tailwind CSS
+### Backend
 
-Monaco Code Editor
+* Node.js
+* Express.js
+* MongoDB Atlas
+* JWT
+* Passport.js (Google & GitHub OAuth)
 
-🌐 Deployment Ready
+### AI
 
-Backend: Render
+* OpenAI API (optional)
+* Mock AI mode for testing
 
-Frontend: Vercel
+---
 
-⚙️ Mock AI Mode (no API cost)
+## 📁 Project Structure
 
-🏗️ Tech Stack
-Frontend
-
-React (Vite)
-
-Tailwind CSS
-
-Axios
-
-Monaco Editor
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB Atlas
-
-JWT
-
-Passport.js (Google & GitHub OAuth)
-
-AI
-
-OpenAI API (optional)
-
-Mock AI mode for testing
-
-📁 Project Structure
+```
 multimodal-debug-assistant/
 │
 ├── backend/
@@ -91,9 +82,15 @@ multimodal-debug-assistant/
 │   └── package.json
 │
 └── README.md
+```
 
-⚙️ Environment Variables
-Backend .env
+---
+
+## ⚙️ Environment Variables
+
+### Backend `.env`
+
+```env
 PORT=4000
 MONGO_URI=your_mongodb_atlas_uri
 JWT_SECRET=MultimodalDebugAssistant
@@ -110,94 +107,127 @@ FRONTEND_URL=http://localhost:5173
 # AI
 MOCK_AI=true
 OPENAI_API_KEY=sk-xxxx (optional)
+```
 
-Frontend .env
+---
+
+### Frontend `.env`
+
+```env
 VITE_BACKEND_URL=http://localhost:4000
+```
 
-▶️ Running Locally
-1️⃣ Backend
+---
+
+## ▶️ Running Locally
+
+### 1️⃣ Backend
+
+```bash
 cd backend
 npm install
 npm run dev
-
+```
 
 Backend runs on:
 
+```
 http://localhost:4000
+```
 
-2️⃣ Frontend
+---
+
+### 2️⃣ Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
-
+```
 
 Frontend runs on:
 
+```
 http://localhost:5173
+```
 
-🔐 Authentication Flow
+---
 
-User logs in (Email / Google / GitHub)
+## 🔐 Authentication Flow
 
-Backend issues JWT token
+1. User logs in (Email / Google / GitHub)
+2. Backend issues JWT token
+3. Token stored in `localStorage`
+4. Token sent in `Authorization: Bearer <token>`
+5. Protected APIs validate token
 
-Token stored in localStorage
+---
 
-Token sent in Authorization: Bearer <token>
+## 🤖 AI Analysis API
 
-Protected APIs validate token
+**Endpoint**
 
-🤖 AI Analysis API
-
-Endpoint
-
+```
 POST /api/agent/analyze
+```
 
+**Headers**
 
-Headers
-
+```
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
+```
 
+**Body**
 
-Body
-
+```json
 {
   "code": "function test(x){ return x.value; }",
   "logs": "TypeError: Cannot read property 'value' of undefined"
 }
+```
 
-🧪 Mock AI Mode
+---
+
+## 🧪 Mock AI Mode
 
 To avoid API costs:
 
+```env
 MOCK_AI=true
-
+```
 
 Returns predefined AI suggestions for testing.
 
-🌍 Deployment
-Backend
+---
 
-Platform: Render
+## 🌍 Deployment
 
-Start command: npm start
+### Backend
 
-Frontend
+* Platform: **Render**
+* Start command: `npm start`
 
-Platform: Vercel
+### Frontend
 
-Framework: Vite
+* Platform: **Vercel**
+* Framework: Vite
 
-OAuth (Production)
+### OAuth (Production)
 
 Update Google & GitHub callback URLs to deployed backend URLs.
 
-🎓 Viva / Evaluation Summary
+---
 
-“This project implements a secure multimodal AI debugging system using React, Node.js, JWT authentication, OAuth, and AI-based analysis. The system is deployed using modern cloud platforms and follows industry-standard security practices.”
+## 🎓 Viva / Evaluation Summary
 
-👨‍💻 Author
+> “This project implements a secure multimodal AI debugging system using React, Node.js, JWT authentication, OAuth, and AI-based analysis. The system is deployed using modern cloud platforms and follows industry-standard security practices.”
 
-G.Hariharan
+---
+
+## 👨‍💻 Author
+
+**Hariharan**
+Final Year Project
 Multimodal AI Debug Assistant
+
