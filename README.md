@@ -227,7 +227,7 @@ Update Google & GitHub callback URLs to deployed backend URLs.
 
 ## 👨‍💻 Author
 
-**Hariharan**
-Final Year Project
+**G.Hariharan**
+Project
 Multimodal AI Debug Assistant
 
